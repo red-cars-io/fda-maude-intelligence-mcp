@@ -1,0 +1,30 @@
+{
+  "title": "FDA MAUDE Intelligence MCP",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "tool": {
+      "title": "Tool Name",
+      "type": "string",
+      "description": "MCP tool to call",
+      "enum": [
+        "compare_device_peers",
+        "analyze_recall_chain",
+        "score_manufacturer",
+        "track_adverse_event_trends",
+        "get_device_clearance_history",
+        "get_recall_details",
+        "search_adverse_events"
+      ],
+      "editor": "select",
+      "prefill": "compare_device_peers"
+    },
+    "params": {
+      "title": "Parameters (JSON)",
+      "type": "object",
+      "description": "Tool parameters as JSON object",
+      "editor": "json",
+      "prefill": {"company_a": "Medtronic", "company_b": "Abbott", "product_code": "MVN"}
+    }
+  }
+}

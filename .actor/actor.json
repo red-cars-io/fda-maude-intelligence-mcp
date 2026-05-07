@@ -2,14 +2,20 @@
 	"$schema": "https://apify.com/schemas/v1/actor.ide.json",
 	"actorSpecification": 1,
 	"name": "fda-maude-intelligence-mcp",
-	"title": "Standby Actor in TypeScript",
-	"description": "Standby Actor in TypeScript.",
-	"version": "0.0",
+	"title": "FDA MAUDE Intelligence MCP",
+	"description": "Medtech peer benchmarking intelligence for AI agents. Compare device manufacturers safety profiles against product-code peers using FDA MAUDE, 510(k), and enforcement data.",
+	"version": "1.0.0",
 	"buildTag": "latest",
 	"usesStandbyMode": true,
+	"canonical": "fda-maude-intelligence-mcp",
+	"tagline": "Medtech peer benchmarking intelligence for AI agents",
+	"webServer": {
+		"enabled": true,
+		"mcpPath": "/mcp"
+	},
 	"meta": {
 		"templateId": "ts-standby",
-		"generatedBy": "<FILL-IN-MODEL>"
+		"generatedBy": "Claude Code"
 	},
 	"dockerfile": "../Dockerfile"
 }
