@@ -322,7 +322,7 @@ if (isStandby) {
     process.on('SIGTERM', () => { server.close(() => process.exit(0)); });
 } else {
     // Batch mode
-    const input = await Actor.getInput();
+    const input = await Actor.getInput() as { tool?: string; params?: Record<string, unknown> } | null;
     if (input) {
         const { tool, params = {} } = input;
         if (tool) {

@@ -16,10 +16,8 @@ const TOOL_PRICES: Record<string, number> = {
 };
 
 async function chargePPE(toolName: string): Promise<void> {
-    const price = TOOL_PRICES[toolName];
-    if (!price) return;
     try {
-        await Actor.charge(toolName, { amount: price });
+        await Actor.charge({ eventName: toolName });
     } catch (err) {
         console.error(`[ppe] charge failed for ${toolName}:`, err);
     }
@@ -358,11 +356,11 @@ export async function handleTool(toolName: string, params: Record<string, any>):
 
     switch (toolName as ToolName) {
         case 'compare_device_peers':
-            return compareDevicePeers(params);
+            return compareDevicePeers(params as any);
         case 'analyze_recall_chain':
-            return analyzeRecallChain(params);
+            return analyzeRecallChain(params as any);
         case 'score_manufacturer':
-            return scoreManufacturer(params);
+            return scoreManufacturer(params as any);
         case 'track_adverse_event_trends':
             return trackAdverseEventTrends(params);
         case 'search_adverse_events':

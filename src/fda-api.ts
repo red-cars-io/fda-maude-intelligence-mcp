@@ -173,7 +173,7 @@ export async function countEventsByQuarter(
     device_name?: string,
     manufacturer?: string,
     product_code?: string,
-    quarters = 8
+    _quarters = 8
 ): Promise<Record<string, number>> {
     const searchParts: string[] = [];
     if (device_name) searchParts.push(`device.generic_name:${device_name}`);
