@@ -1,8 +1,8 @@
 {
-    "name": "ts-standby-project",
+    "name": "fda-maude-intelligence-mcp",
     "version": "0.0.1",
     "type": "module",
-    "description": "This is an example of an Apify Actor that uses Standby mode.",
+    "description": "Medtech peer benchmarking MCP server for AI agents",
     "engines": {
         "node": ">=20.0.0"
     },
@@ -33,6 +33,6 @@
         "format:check": "prettier --check .",
         "test": "vitest run"
     },
-    "author": "It's not you it's me",
+    "author": "red-cars-io",
     "license": "ISC"
 }
