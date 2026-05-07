@@ -1,0 +1,30 @@
+# FDA MAUDE Intelligence MCP
+
+## About
+MCP server for medtech peer benchmarking. Compares device manufacturers' safety profiles against product-code peers using FDA MAUDE, 510(k), and enforcement data.
+
+## Tools
+
+| Tool | Price | Description |
+|------|-------|-------------|
+| compare_device_peers | $0.15 | Compare two companies by product code with risk-adjusted scores |
+| analyze_recall_chain | $0.10 | Trace component recall cascade to finished devices |
+| score_manufacturer | $0.08 | Single-company compliance score and risk surface |
+| track_adverse_event_trends | $0.08 | Monitor device adverse event volume over time |
+| get_device_clearance_history | $0.05 | 510(k) clearance chronology |
+| get_recall_details | $0.05 | Deep dive on specific recall |
+| search_adverse_events | $0.05 | Search MAUDE adverse event reports |
+
+## Data Sources
+- FDA MAUDE: api.fda.gov/device/event.json
+- FDA 510(k): api.fda.gov/device/510k.json
+- FDA Enforcement: api.fda.gov/device/enforcement.json
+
+## Use Cases
+- Medtech VC due diligence: compare Medtronic vs Abbott cardiac devices
+- Recall risk analysis: track adverse event trends for pacemaker product lines
+- Competitive intelligence: benchmark safety profiles across peer companies
+
+## Deployment
+- MCP endpoint: https://fda-maude-intelligence-mcp.apify.actor/mcp
+- No API key required
