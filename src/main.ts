@@ -224,7 +224,7 @@ const MCP_MANIFEST = {
 await Actor.init();
 
 const isStandby = process.env.APIFY_META_ORIGIN === 'STANDBY';
-const PORT = Actor.config.get('standbyPort') || 3000;
+const PORT = Actor.config.get('containerPort') || process.env.ACTOR_WEB_SERVER_PORT || 3000;
 
 if (isStandby) {
     const server = http.createServer(async (req, res) => {
